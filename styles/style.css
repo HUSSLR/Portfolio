@@ -280,26 +280,28 @@ span{
 .banner{
     display: flex;
     flex-direction: row;
-    height: max-content;
+    justify-content: center;
+    max-height: 100vh;
 }
 
 .banner h1{
-    margin-top: 20%;
+    margin-top: 25%;
     margin-left: 10%;
 }
 
 .banner img{
     margin-left: 4%;
-    width: 30em;
+    width: 40em;
+    margin-top: 6%;
 }
 
 
 @media (max-width: 900px) {
     .banner { display: flex; flex-direction: column; align-items: center; }
-    .banner h1 { font-size: 50px; margin-bottom: 1em; margin-top: 3em;}
-    .banner img { width: 80%; }
-    .schermen_oplossing_fed {justify-content: center; flex-direction: column; width: 350%; margin-right: 0;}
-    body {overflow-x: hidden;}
+    .banner h1 { font-size: 40px; margin-bottom: 1em; margin-top: 3em; margin-right: 0;}
+    .banner img { margin: 0; width: 20em; } 
+    .schermen_oplossing_fed { justify-content: center; flex-direction: column; width: 350%; margin-right: 0; }
+    body { overflow-x: hidden; }
 }
 
 
@@ -319,13 +321,12 @@ span{
 
 /* Over mij */
 .overmij{
-    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     margin-left: 13%;
+    margin-right: 13%;
     margin-top: 10%;
-    padding-right: 30%;
 }
 
 .overmij p{
