@@ -275,7 +275,7 @@ span{
 .banner{
     display: flex;
     flex-direction: row;
-    height: auto;
+    height: max-content;
 }
 
 .banner h1{
@@ -285,7 +285,7 @@ span{
 
 .banner img{
     margin-left: 4%;
-    width: 38em;
+    width: 30em;
 }
 
 
@@ -294,10 +294,23 @@ span{
     .banner h1 { font-size: 50px; margin-bottom: 1em; }
     .banner img { width: 80%; }
     .schermen_oplossing_fed {justify-content: center; flex-direction: column; width: 350%; margin-right: 0;}
-    .link_naar_site a {font-size: 10px; justify-content: center;}
     body {overflow-x: hidden;}
 }
 
+
+@media (max-width: 800px) {
+    h2 {font-size: 28px;}
+    h3 {font-size: 24px;}
+    section.gebruikte_methodes ul {margin-left: 7%;}
+    section.link_naar_site a {font-size: 16px; justify-content: center;}
+    section.schermen_oplossing_fed img { margin-top: 5%; }
+    section.schermen_oplossing_fed img:last-of-type { margin-bottom: 2%; }
+    section.schermen_oplossing_vormgeving2 { width: 73%; margin-top: 10%;}
+    section.schermen_oplossing_delinde { flex-direction: column;}
+    section.schermen_oplossing_delinde img:first-of-type { width: 100%; margin-top: 15%; }
+    section.schermen_oplossing_delinde img:nth-of-type(2) { width: 100%; margin-top: 20%; }
+    section.schermen_oplossing_delinde img:nth-of-type(3) { width: 100%; margin-top: 20%; }
+}
 
 /* Over mij */
 .overmij{
@@ -410,7 +423,6 @@ div figcaption p{
     .vaardigheden { padding: 3em; }
     .projecten_homepage { grid-template-columns: repeat(2, 1fr); }
     .schermen_oplossing { grid-template-columns: repeat(2, 1fr); }
-    .schermen_oplossing_vormgeving2 { flex-direction: column; }
     .schermen_oplossing_fed { grid-template-columns: repeat(2, 1fr); }
     .schermen_oplossing_delinde { grid-template-columns: repeat(3,1fr); }
 }
@@ -422,6 +434,17 @@ div figcaption p{
 @media (min-width: 1100px) {
     .projecten_homepage { grid-template-columns: repeat(3, 1fr); }
     .schermen_oplossing_delinde { grid-template-columns: repeat(3,1fr); }
+}
+
+
+@media (min-width: 1400px) {
+    .banner { height: 47em; }
+    .banner img { width: auto; }
+}
+
+@media (min-width: 1500px) {
+    .banner { height: 59em; }
+    .banner img { width: auto; }
 }
 
 
@@ -644,16 +667,17 @@ div figcaption p{
 
 
 .schermen_oplossing_delinde{
-    display: grid;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
     margin-top: 5%;
     margin-bottom: 0%;
     margin-left: 13%;
-    margin-right: 5%;
+    margin-right: 13%;
 }
 
 .schermen_oplossing_delinde img:first-of-type{
-    width: 31.5em;
-    margin-right: 4em;
+    width: 47%;
 }
 
 .schermen_oplossing_delinde img:nth-of-type(2){
@@ -662,5 +686,4 @@ div figcaption p{
 
 .schermen_oplossing_delinde img:nth-of-type(3){
     width: 12em;
-    margin: 0;
 }
