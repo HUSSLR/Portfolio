@@ -301,14 +301,15 @@ span{
     .banner h1 { font-size: 40px; margin-bottom: 1em; margin-top: 3em; margin-right: 0;}
     .banner img { margin: 0; width: 20em; } 
     .schermen_oplossing_fed { justify-content: center; flex-direction: column; width: 350%; margin-right: 0; }
+    .vaardigheden ul { margin-top: 2%; margin-left: 10%; }
     body { overflow-x: hidden; }
 }
 
 
 @media (max-width: 800px) {
-    h2 {font-size: 28px;}
-    h3 {font-size: 24px;}
-    section.gebruikte_methodes ul {margin-left: 7%;}
+    h2 { font-size: 28px; }
+    h3 { font-size: 24px; }
+    section.gebruikte_methodes ul { margin-left: 7%; }
     section.link_naar_site a {font-size: 16px; justify-content: center;}
     section.schermen_oplossing_fed img { margin-top: 5%; }
     section.schermen_oplossing_fed img:last-of-type { margin-bottom: 2%; }
@@ -473,6 +474,13 @@ div figcaption p{
 /*************/
 /* PROJECTEN */
 /*************/
+
+/***************************/
+/* Voor space onder de nav */
+/***************************/
+.space_section{
+    padding: 2em;
+}
 
 
 /*******/
