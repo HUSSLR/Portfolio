@@ -61,6 +61,7 @@ body{
     background-color: var(--background-color);
     min-height: 100%;
     display: block;
+    position: relative;
 }
 
 body p{
@@ -69,6 +70,8 @@ body p{
 
 header{
     background-color: var(--nav-color);
+    position: fixed;
+    width: 100%;
 } 
 
 hr{
@@ -124,6 +127,7 @@ footer a{
     width: 6em;
     display: flex;
     align-items: center;
+    margin-left: 24px;
 }
 
 .navbar{
@@ -131,7 +135,7 @@ footer a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 24px;
+    width: 100%;
 }
 
 .nav-menu{
@@ -157,7 +161,8 @@ footer a{
 .hamburger{
     display: none;
     cursor: pointer;
-    margin: 2em;
+    margin: 0;
+    margin-right: 24px;
 }
 
 .bar{
@@ -291,7 +296,7 @@ span{
 
 @media (max-width: 900px) {
     .banner { display: flex; flex-direction: column; align-items: center; }
-    .banner h1 { font-size: 50px; margin-bottom: 1em; }
+    .banner h1 { font-size: 50px; margin-bottom: 1em; margin-top: 3em;}
     .banner img { width: 80%; }
     .schermen_oplossing_fed {justify-content: center; flex-direction: column; width: 350%; margin-right: 0;}
     body {overflow-x: hidden;}
@@ -357,6 +362,7 @@ div figcaption p{
     flex-direction: column;
     margin-top: 10%;
     padding: 3%;
+    border-radius: 5px;
 }
 
 .vaardigheden section:first-of-type{
@@ -408,6 +414,7 @@ div figcaption p{
 .projecten_homepage img{
     width: 100%;
     box-shadow: 3px 3px 3px 0px var(--dropshadow-buttons);
+    border-radius: 3px;
 }
 
 .projecten_homepage figcaption{
@@ -432,7 +439,7 @@ div figcaption p{
 }
 
 @media (min-width: 1100px) {
-    .projecten_homepage { grid-template-columns: repeat(3, 1fr); }
+    .projecten_homepage { grid-template-columns: repeat(2, 1fr); }
     .schermen_oplossing_delinde { grid-template-columns: repeat(3,1fr); }
 }
 
