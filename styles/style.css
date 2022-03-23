@@ -346,7 +346,7 @@ div figcaption p{
 
 .vaardigheden ul{
     margin-top: 2%;
-    margin-left: 4%;
+    margin-left: 1em;
 }
 
 
@@ -729,7 +729,7 @@ div figcaption p{
     .banner h1 { font-size: 40px; margin-bottom: 1em; margin-top: 1.5em; margin-right: 0;}
     .banner img { margin: 0; width: 20em; } 
     .schermen_oplossing_fed { justify-content: center; flex-direction: column; width: 350%; margin-right: 0; }
-    .vaardigheden ul li { margin-top: 2%; margin-left: 4%; }
+    .vaardigheden ul li { margin-top: 2%; margin-left: 5px; }
     body { overflow-x: hidden; }
 }
 
