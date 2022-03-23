@@ -9,6 +9,10 @@
 }
 
 
+
+
+
+
 /*********/
 /* ROOTS */
 /*********/
@@ -16,11 +20,13 @@
 /* Background kleuren */
 --background-color: rgb(29, 29, 29);
 --nav-color: rgb(46, 46, 46);
+
 /* Tekst kleuren */
 --text-color: white;
 --p-color: white;
 --text-color-white: white;
 --text-color-lightgrey: rgb(170, 170, 170);
+
 /* Specifieke styling kleuren */
 --dropshadow-buttons: rgb(97, 97, 97);
 --dropshadow-color: rgb(15, 15, 15);
@@ -31,6 +37,10 @@
     :root{
         --background-color: white;
     }
+
+
+
+
 
 
 /*********/
@@ -50,6 +60,11 @@
     font-family: '' ;
     src: url();
 }
+
+
+
+
+
 
 /************************************/
 /* ALGEMENE STYLING VOOR ALLE PAGES */
@@ -175,40 +190,6 @@ footer a{
     background-color: white;
 }
 
-@media(max-width:900px){
-    .hamburger{
-        display: block;
-    }
-    .hamburger.active .bar:nth-child(2){
-        opacity: 0;
-    }
-    .hamburger.active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    .nav-menu{
-        position: absolute;
-        left: -200%;
-        top: 60px;
-        gap: 0;
-        flex-direction: column;
-        background-color: var(--nav-color);
-        width: 100%;
-        text-align: center;
-        transition: 0.5s;
-    }
-
-    .nav-item{
-        margin: 16px 0;
-    }
-
-    .nav-menu.active{
-        left: 0;
-    }
-}
-
 
 /* Algemene styling van tekstelementen */
 h1{
@@ -259,6 +240,111 @@ span{
 }
 
 
+
+
+
+
+/*****************/
+/* Media Queries */
+/****************/
+
+/* Hamburger menu */
+@media (max-width:900px){
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: absolute;
+        left: -200%;
+        top: 60px;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--nav-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.5s;
+    }
+
+    .nav-item{
+        margin: 16px 0;
+    }
+
+    .nav-menu.active{
+        left: 0;
+    }
+}
+
+
+/* Voor mobiel - max width */
+@media (max-width: 900px) {
+    .banner { display: flex; flex-direction: column; align-items: center; }
+    .banner h1 { font-size: 40px; margin-bottom: 1em; margin-top: 1.5em; margin-right: 0;}
+    .banner img { margin: 0; width: 20em; } 
+    .schermen_oplossing_fed { justify-content: center; flex-direction: column; width: 350%; margin-right: 0; }
+    .vaardigheden ul li { margin-top: 2%; margin-left: 4%; }
+    body { overflow-x: hidden; }
+}
+
+
+@media (max-width: 800px) {
+    h2 { font-size: 28px; }
+    h3 { font-size: 24px; }
+    section.gebruikte_methodes ul { margin-left: 7%; }
+    section.link_naar_site a {font-size: 16px; justify-content: center;}
+    section.schermen_oplossing_fed img { margin-top: 5%; }
+    section.schermen_oplossing_fed img:last-of-type { margin-bottom: 2%; }
+    section.schermen_oplossing_vormgeving2 { width: 73%; margin-top: 10%;}
+    section.schermen_oplossing_delinde { flex-direction: column;}
+    section.schermen_oplossing_delinde img:first-of-type { width: 100%; margin-top: 15%; }
+    section.schermen_oplossing_delinde img:nth-of-type(2) { width: 100%; margin-top: 20%; }
+    section.schermen_oplossing_delinde img:nth-of-type(3) { width: 100%; margin-top: 20%; }
+}
+
+
+/* Voor mobiel - min width */
+@media (min-width: 800px) {
+    .vaardigheden section:last-of-type { grid-template-columns: repeat(2, 1fr); }
+    .vaardigheden { padding: 3em; }
+    .projecten_homepage { grid-template-columns: repeat(2, 1fr); }
+    .schermen_oplossing { grid-template-columns: repeat(2, 1fr); }
+    .schermen_oplossing_fed { grid-template-columns: repeat(2, 1fr); }
+    .schermen_oplossing_delinde { grid-template-columns: repeat(3,1fr); }
+}
+
+@media (min-width: 900px){
+    .schermen_oplossing_delinde { grid-template-columns: repeat(3,1fr); }
+}
+
+@media (min-width: 1100px) {
+    .projecten_homepage { grid-template-columns: repeat(2, 1fr); }
+    .schermen_oplossing_delinde { grid-template-columns: repeat(3,1fr); }
+}
+
+
+@media (min-width: 1400px) {
+    .banner { height: 47em; }
+    .banner img { width: auto; }
+}
+
+@media (min-width: 1500px) {
+    .banner { height: 59em; }
+    .banner img { width: auto; }
+}
+
+
+
+
+
+
 /**************************************************************/
 /* Specifieke styling voor beide pages van boven naar beneden */
 /**************************************************************/
@@ -276,7 +362,6 @@ span{
 /********/
 
 /* Banner */
-
 .banner{
     display: flex;
     flex-direction: row;
@@ -295,30 +380,6 @@ span{
     margin-top: 6%;
 }
 
-
-@media (max-width: 900px) {
-    .banner { display: flex; flex-direction: column; align-items: center; }
-    .banner h1 { font-size: 40px; margin-bottom: 1em; margin-top: 3em; margin-right: 0;}
-    .banner img { margin: 0; width: 20em; } 
-    .schermen_oplossing_fed { justify-content: center; flex-direction: column; width: 350%; margin-right: 0; }
-    .vaardigheden ul { margin-top: 2%; margin-left: 10%; }
-    body { overflow-x: hidden; }
-}
-
-
-@media (max-width: 800px) {
-    h2 { font-size: 28px; }
-    h3 { font-size: 24px; }
-    section.gebruikte_methodes ul { margin-left: 7%; }
-    section.link_naar_site a {font-size: 16px; justify-content: center;}
-    section.schermen_oplossing_fed img { margin-top: 5%; }
-    section.schermen_oplossing_fed img:last-of-type { margin-bottom: 2%; }
-    section.schermen_oplossing_vormgeving2 { width: 73%; margin-top: 10%;}
-    section.schermen_oplossing_delinde { flex-direction: column;}
-    section.schermen_oplossing_delinde img:first-of-type { width: 100%; margin-top: 15%; }
-    section.schermen_oplossing_delinde img:nth-of-type(2) { width: 100%; margin-top: 20%; }
-    section.schermen_oplossing_delinde img:nth-of-type(3) { width: 100%; margin-top: 20%; }
-}
 
 /* Over mij */
 .overmij{
@@ -389,7 +450,6 @@ div figcaption p{
 }
 
 
-
 /* Werk */
 #mijnWerk h2{
     margin-left: 13%;
@@ -402,7 +462,6 @@ div figcaption p{
     color: var(--text-color-zwart);
     margin-top: 1%;
 }
-
 
 .projecten_homepage figure{
     margin: 3%;
@@ -427,44 +486,10 @@ div figcaption p{
 } 
 
 
-@media (min-width: 800px) {
-    .vaardigheden section:last-of-type { grid-template-columns: repeat(2, 1fr); }
-    .vaardigheden { padding: 3em; }
-    .projecten_homepage { grid-template-columns: repeat(2, 1fr); }
-    .schermen_oplossing { grid-template-columns: repeat(2, 1fr); }
-    .schermen_oplossing_fed { grid-template-columns: repeat(2, 1fr); }
-    .schermen_oplossing_delinde { grid-template-columns: repeat(3,1fr); }
-}
-
-@media (min-width: 900px){
-    .schermen_oplossing_delinde { grid-template-columns: repeat(3,1fr); }
-}
-
-@media (min-width: 1100px) {
-    .projecten_homepage { grid-template-columns: repeat(2, 1fr); }
-    .schermen_oplossing_delinde { grid-template-columns: repeat(3,1fr); }
-}
-
-
-@media (min-width: 1400px) {
-    .banner { height: 47em; }
-    .banner img { width: auto; }
-}
-
-@media (min-width: 1500px) {
-    .banner { height: 59em; }
-    .banner img { width: auto; }
-}
-
-
 
 /**********/
 /* FOOTER */
 /**********/
-
-/* Contact */
-
-
 
 
 
@@ -475,9 +500,7 @@ div figcaption p{
 /* PROJECTEN */
 /*************/
 
-/***************************/
 /* Voor space onder de nav */
-/***************************/
 .space_section{
     padding: 2em;
 }
@@ -535,7 +558,7 @@ div figcaption p{
 }
 
 
-/* Vaardigheden */
+/* Schermen */
 .schermen_oplossing{
     display: grid;
     grid-gap: 4em;
@@ -545,13 +568,12 @@ div figcaption p{
     margin-bottom: 0%;
 }
 
-
 .schermen_oplossing img{
     width: 100%;
 }
 
-/* Gebruikte methodes */
 
+/* Gebruikte methodes */
 .gebruikte_methodes{
     margin: 8%;
     margin-left: 13%;
@@ -563,10 +585,12 @@ div figcaption p{
 }
 
 
+
 /****************/
 /* VORMGEVING 2 */
 /****************/
 
+/* Banner */
 .banner_project_vormgeving2{
     padding-top: 15%;
     background-image: url("../images/plogdedag.svg");
@@ -586,6 +610,7 @@ div figcaption p{
 }
 
 
+/* Schermen */
 .schermen_oplossing_vormgeving2{
     display: flex;
     flex-direction: row;
@@ -597,11 +622,9 @@ div figcaption p{
     width: 38%;
 }
 
-
 .schermen_oplossing_vormgeving2 img{
     width: 40%;
 }
-
 
 
 
@@ -609,6 +632,7 @@ div figcaption p{
 /* FED */
 /*******/
 
+/* Banner */
 .banner_project_fed{
     padding-top: 15%;
     background-image: url("../images/banner_fed.svg");
@@ -628,6 +652,7 @@ div figcaption p{
 }
 
 
+/* Schermen */
 .schermen_oplossing_fed{
     display: flex;
     justify-content: space-between;
@@ -641,6 +666,8 @@ div figcaption p{
     width: 20%;
 }
 
+
+/* Link naar Github */
 .link_naar_site{
     margin-top: 5%;
     display: flex;
@@ -658,10 +685,12 @@ div figcaption p{
 }
 
 
+
 /************/
 /* DE LINDE */
 /************/
 
+/* Baner */
 .banner_project_delinde{
     padding-top: 15%;
     background-image: url("../images/banner_delinde.svg");
@@ -681,7 +710,7 @@ div figcaption p{
 }
 
 
-
+/* Schermen */
 .schermen_oplossing_delinde{
     display: flex;
     justify-content: space-between;
